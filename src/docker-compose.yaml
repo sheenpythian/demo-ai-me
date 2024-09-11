@@ -1,0 +1,10 @@
+# gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
+services:
+  demo-ai-site:     #image name to be built
+    image: us-central1-docker.pkg.dev/caramel-day-434618-t7/demo-ai-art-repo/demo-ai-site:latest
+    #image: demo-ai-site   #the image will be transferred to image repo locally #if both image and build are specified, then Compose names the built image with the 'availapi' and optional tag specified in 'image' e.g. availapi:api
+    build:        #can be specified either as a string containing a path to the build context e.g. ~/axweb
+      context: ./       #pointing to where the Dockerfile is located 
+      dockerfile: Dockerfile    #the dockerfile name
+    ports:
+      - "80:80"

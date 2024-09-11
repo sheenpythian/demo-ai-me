@@ -1,0 +1,9 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: gcloud-00001-tcw
+spec:
+  template:
+    spec:
+      containers:
+      - image: us-central1-docker.pkg.dev/caramel-day-434618-t7/demo-ai-art-repo/demo-ai-site:latest
