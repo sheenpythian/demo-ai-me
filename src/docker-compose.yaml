@@ -2,6 +2,7 @@
 # cd ./src
 # docker-compose -f docker-compose.yaml build
 # docker-compose -f docker-compose.yaml push
+# DOES NOT WORK gcloud run deploy gcloud --image us-central1-docker.pkg.dev/caramel-day-434618-t7/demo-ai-art-repo/demo-ai-site:latest --region=us-central1
 services:
   demo-ai-site:     #image name to be built
     image: us-central1-docker.pkg.dev/caramel-day-434618-t7/demo-ai-art-repo/demo-ai-site:latest
